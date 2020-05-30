@@ -2,13 +2,12 @@ $(function() {
 	var message = {
 
 		message: [
-		    'web development;', 
-			'full Stack Development;', 
-			'javascript, angular, nodejs...;',
-			'Python, C/C++;',
-			'the software/network security industry;',
-			'the medical/health industry;',
-			'the automotive industry;',
+		    'web development', 
+			'full Stack Development', 
+			'javascript, angular, nodejs...',
+			'the software/network security industry',
+			'the medical/health industry',
+			'the automotive industry',
 		],
 		counterS: 0,
 		counterL: 0,

@@ -2,11 +2,10 @@ html,body {
   font-family: Raleway;
   width:100%;
   height:100%;
-  position:absolute;
   text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
 body {
-  background: linear-gradient(90deg,#16054A,#C8A6B4);
+  background:linear-gradient(90deg,#16054A,#C8A6B4);
 }
 .header {
   color: #cbce91ff;
@@ -21,7 +20,7 @@ p.section-subheading {
   color:white;
   font-size: large;
 }
-h2, h4 {
+h2, h3, h4, h5, h6{
   color:white;
   font-weight:500;
 }
@@ -188,6 +187,12 @@ ul.list-inline {
   z-index: -1;
 }
 #particles-js-skills {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#particles-js-experience {
   position: absolute;
   width: 100%;
   height: 100%;

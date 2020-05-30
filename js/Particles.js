@@ -1,4 +1,4 @@
-const particleDivs = ['particles-js-about', 'particles-js-skills', 'particles-js-courses','particles-js-portfolio', 'particles-js-contact'];
+const particleDivs = ['particles-js-about', 'particles-js-skills', 'particles-js-experience', 'particles-js-courses','particles-js-portfolio', 'particles-js-contact'];
 
 particleDivs.forEach(element => 
   /* ---- particles.js config ---- */
