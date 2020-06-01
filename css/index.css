@@ -215,13 +215,13 @@ ul.list-inline {
   z-index: -1;
 }
 
-.content{
+.content {
   text-align: center;
 }
 
 .list {
   list-style: none; /* Remove default bullets */
-  text-align: left;
+  text-align: center;
 }
 
 .list li::before {
@@ -236,6 +236,7 @@ ul.list-inline {
 .list li a {
   color: white
 }
+
 .list li {
   color: white
 }
