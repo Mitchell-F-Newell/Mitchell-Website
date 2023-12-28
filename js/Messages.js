@@ -4,8 +4,8 @@ $(function() {
 		message: [
 		    'web development', 
 			'full Stack Development', 
-			'javascript, angular, nodejs...',
-			'the software/network security industry',
+			'Typescript, Node.js, React...',
+			'the AR/VR industry',
 			'the medical/health industry',
 			'the automotive industry',
 		],
