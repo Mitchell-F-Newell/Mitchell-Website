@@ -1,851 +1,747 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="img/Mitchell2.jpg">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+    <title>Mitchell Newell</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="css/agency.css" rel="stylesheet" type='text/css'>
-
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Styling -->
     <link href='css/index.css' rel='stylesheet' type='text/css'>
-    <link href='css/animate.css'rel='stylesheet' type='text/css'>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
 </head>
 
-<body id = "page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Mitchell Newell</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#courses">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<body>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+        <a class="nav-brand" href="#hero">Mitchell <span>Newell</span></a>
+        <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-    <!-- Header -->
-    <header class="masthead">
-        <div class="intro-text">
-            <div class="intro-lead-in">Mitchell Newell </div>
-            <h2>
-                <div class="text-uppercase">
-                    <span>I love&nbsp;</span><span class="text"></span><span class="cursor">|</span>
-                </div> 
-            </h2>
-            <a class="js-scroll-trigger" href="#about"> <i class="fas fa-arrow-circle-down fa-5x bounce" style="padding: 50px;"></i></a>
+
+    <!-- HERO -->
+    <section id="hero">
+        <canvas id="particles-hero" class="particles-bg"></canvas>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+
+        <div class="hero-inner">
+            <div class="hero-eyebrow">Software Engineering Manager</div>
+            <h1 class="hero-name">Mitchell<br><span class="accent">Newell</span></h1>
+            <div class="hero-typed-line">
+                I love&nbsp;<span class="typed-text" id="heroTyped"></span><span class="cursor">|</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#about" class="btn-primary-custom">
+                    <i class="fas fa-user"></i> About Me
+                </a>
+                <a href="Mitchell-Newell-Resume-2026.pdf" download class="btn-outline-custom">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+            </div>
         </div>
-    </header>
-    <!-- About -->
-    <section class="page-section" id="about">
-        <div id="particles-js-about"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">About</h2>
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/Mitchell_Newell_Picture.png" alt="">
-                        <h4>Mitchell Newell</h4>
+
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <canvas class="particles-bg" data-particle-id="about"></canvas>
+        <div class="section-inner">
+            <div class="section-label">01 — About</div>
+            <h2 class="section-title">Engineering Leader.<br>Builder. Mentor.</h2>
+
+            <div class="about-grid wow-fade">
+                <div class="about-text">
+                    <p>Engineering leader with experience scaling fintech platforms, leading teams of up to 12
+                        engineers, and delivering high-impact payment infrastructure. Strong technical background in
+                        backend systems and large-scale production monoliths with event-driven components.</p>
+                    <p>Combined with proven leadership in cross-team initiatives, product delivery, and platform
+                        reliability. Experienced driving major banking integrations, launching new payment capabilities,
+                        and improving core system performance at scale.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Engineers Led</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">$300M+</div>
+                            <div class="stat-label">Processing Volume</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">200K+</div>
+                            <div class="stat-label">Payments Processed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">7+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
                     </div>
-                    <p class="section-subheading">
-                        I am an Innovative, creative and self-motivated graduate of Software Engineering with over 6 years of experience in software design/analysis and agile software development.
-                        I am proficient in several programming languages, a fast learner with strong time management/multi-tasking skills, have a strong work ethic and strong troubleshooting/problem-solving skills 
-                        with the ability to thrive in team/individual settings. Passionate about writing maintainable, extensible and testable code, continued learning, and debugging/solving problems.
+
+                    <div class="about-resume-btn">
+                        <a href="Mitchell-Newell-Resume-2026.pdf" download class="btn-primary-custom">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-photo-wrap">
+                    <img src="img/Mitchell_Newell_Picture.png" alt="Mitchell Newell" class="about-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <canvas class="particles-bg" data-particle-id="skills"></canvas>
+        <div class="section-inner">
+            <div class="section-label">02 — Skills</div>
+            <h2 class="section-title">Technical Arsenal</h2>
+            <p class="section-sub">Technologies, tools, and disciplines I work with.</p>
+
+            <div class="skills-categories wow-fade">
+                <div class="skill-category">
+                    <div class="skill-cat-title">Engineering Leadership</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Mentoring</span>
+                        <span class="skill-tag">Technical Roadmaps</span>
+                        <span class="skill-tag">Cross-team Programs</span>
+                        <span class="skill-tag">Architecture Decisions</span>
+                        <span class="skill-tag">Agile Delivery</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-title">Backend & Platform</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Distributed Systems</span>
+                        <span class="skill-tag">Event-driven Arch</span>
+                        <span class="skill-tag">Payment Infrastructure</span>
+                        <span class="skill-tag">API Development</span>
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">Kafka</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-title">Cloud & Infrastructure</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">ArgoCD</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">ProxySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-title">Testing</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Mocha</span>
+                        <span class="skill-tag">Unit Testing</span>
+                        <span class="skill-tag">Integration Testing</span>
+                        <span class="skill-tag">Postman Automation</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-title">Frameworks & Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">AngularJS</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Power BI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-title">Security & Systems</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">2FA / MFA</span>
+                        <span class="skill-tag">DDoS Mitigation</span>
+                        <span class="skill-tag">ELK Stack</span>
+                        <span class="skill-tag">Microservice Architecture</span>
+                        <span class="skill-tag">Monolithic Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-bars-title wow-fade">Language Proficiency</div>
+
+            <div class="wow-fade" id="skillbarsContainer">
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">JavaScript / TypeScript</span><span
+                            class="skillbar-pct">90%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="90%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">Python</span><span
+                            class="skillbar-pct">85%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="85%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">SQL</span><span
+                            class="skillbar-pct">75%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="75%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">PHP</span><span
+                            class="skillbar-pct">75%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="75%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">HTML / CSS</span><span
+                            class="skillbar-pct">75%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="75%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">Java</span><span
+                            class="skillbar-pct">60%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="60%"></div>
+                    </div>
+                </div>
+                <div class="skillbar-wrap">
+                    <div class="skillbar-meta"><span class="skillbar-name">C / C++</span><span
+                            class="skillbar-pct">60%</span></div>
+                    <div class="skillbar-track">
+                        <div class="skillbar-fill" data-pct="60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <canvas class="particles-bg" data-particle-id="experience"></canvas>
+        <div class="section-inner">
+            <div class="section-label">03 — Experience</div>
+            <h2 class="section-title">Career Timeline</h2>
+            <p class="section-sub">Previous technical and industry experience.</p>
+
+            <div class="timeline">
+
+                <!-- Trolley EM -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Trolley</div>
+                        <div class="timeline-role">Software Engineering Manager, Core Team</div>
+                        <div class="timeline-date">June 2025 – Present</div>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="timeline-section-label">Team Leadership</div>
+                        <ul class="timeline-list">
+                            <li>Manage a team of 6–11 engineers, providing mentorship, technical guidance, and delivery
+                                oversight.</li>
+                            <li>Own and manage execution of multiple concurrent initiatives impacting core product
+                                systems.</li>
+                            <li>Partner with product, payments, and infrastructure leadership to drive roadmap and
+                                technical strategy.</li>
+                        </ul>
+                        <div class="timeline-section-label">Platform & Product Impact</div>
+                        <ul class="timeline-list">
+                            <li>Manage and oversee development and rollout of multiple new payout methods.</li>
+                            <li>Managed and oversaw improvements and optimizations to the Tax product platform.</li>
+                            <li>Helped manage development and migration of event-driven services to RabbitMQ to improve
+                                reliability,
+                                throughput, and maintainability.</li>
+                            <li>Helped manage development and optimization of large payment batch processing, increasing
+                                supported
+                                batch sizes from ~10K payments to ~80K payments.</li>
+                        </ul>
+                        <div class="timeline-section-label">Major Program — Cross River Bank Integration</div>
+                        <ul class="timeline-list">
+                            <li>Technical lead for Cross River Bank integration (Jan 2025 → Sep 2025), coordinating up
+                                to 12 engineers.</li>
+                        </ul>
+                        <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+                            <span class="highlight-stat"><i class="fas fa-bolt" style="font-size:0.65rem"></i> 200K+
+                                payments processed</span>
+                            <span class="highlight-stat"><i class="fas fa-dollar-sign" style="font-size:0.65rem"></i>
+                                $300M+ payment volume</span>
+                            <span class="highlight-stat"><i class="fas fa-chart-line" style="font-size:0.65rem"></i>
+                                $250M volume in last 3 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trolley Dev -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Trolley</div>
+                        <div class="timeline-role">Software Developer, Core Team</div>
+                        <div class="timeline-date">Aug 2022 – May 2025</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li>Designed and launched the Sync product for invoice ingestion and reconciliation.</li>
+                            <li>Led development on Cross River Bank and Citi Bank integrations.</li>
+                            <li>Developed EU Tax product (e-file generation, e-delivery, government submission).</li>
+                            <li>Participated in support engineering rotation and production incident response.</li>
+                            <li>Expanded automated testing coverage using Mocha.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">TypeScript</span><span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React</span><span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS</span><span class="tech-tag">Mocha</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reach -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Reach</div>
+                        <div class="timeline-role">Software Developer, Core Team</div>
+                        <div class="timeline-date">Feb 2022 – Aug 2022</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li>Led development and integration of Power BI embedded analytics into the merchant admin
+                                platform.</li>
+                            <li>Led migration of TaaS (Tax as a Service) product to Kafka.</li>
+                            <li>Built Postman automation testing workflows.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span><span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vue.js</span><span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Kafka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Helcim DevOps -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Helcim</div>
+                        <div class="timeline-role">Infrastructure Developer (Core → DevOps)</div>
+                        <div class="timeline-date">Apr 2021 – Feb 2022</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li>Built and documented Kubernetes infrastructure for the organization.</li>
+                            <li>Implemented ArgoCD and ProxySQL to improve deployment automation and database
+                                efficiency.</li>
+                            <li>Maintained and improved CI/CD pipelines and ELK stack.</li>
+                            <li>Led containerization of internal services including the Data Vault service.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C</span><span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Kubernetes</span><span class="tech-tag">Docker</span>
+                            <span class="tech-tag">ArgoCD</span><span class="tech-tag">ELK Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Helcim Security -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Helcim</div>
+                        <div class="timeline-role">Junior Developer — System Security</div>
+                        <div class="timeline-date">Jun 2020 – Apr 2021</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li>Maintained central security services and TLS infrastructure.</li>
+                            <li>Implemented QR-code-based 2FA into Helcim's web application.</li>
+                            <li>Supported mitigation of security events including DDoS incidents.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span><span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vue.js</span><span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arterys -->
+                <div class="timeline-item wow-fade">
+                    <div class="timeline-header">
+                        <div class="timeline-company">Arterys Inc.</div>
+                        <div class="timeline-role">Software Developer Intern</div>
+                        <div class="timeline-date">May 2018 – Jul 2019</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li>Developed and extended existing API to support ML model integrations and identity
+                                systems.</li>
+                            <li>Built integration and unit testing coverage across platform services.</li>
+                            <li>Contributed to MFA and third-party identity provider infrastructure.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">TypeScript</span><span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AngularJS</span><span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section" id="courses" style="min-height: auto;">
+        <canvas class="particles-bg" data-particle-id="courses"></canvas>
+        <div class="section-inner">
+            <div class="section-label">04 — Education</div>
+            <h2 class="section-title">Coursework</h2>
+            <p class="section-sub">Technical courses and electives from the University of Calgary.</p>
+
+            <div class="courses-grid wow-fade">
+                <div class="course-item"><span class="course-code">ENGG 504</span><span>Entrepreneurial Capstone Design
+                        Project II</span></div>
+                <div class="course-item"><span class="course-code">ENGG 503</span><span>Entrepreneurial Capstone Design
+                        Project I</span></div>
+                <div class="course-item"><span class="course-code">SENG 533</span><span>Software Performance
+                        Evaluation</span></div>
+                <div class="course-item"><span class="course-code">ENEL 503</span><span>Computer Vision</span></div>
+                <div class="course-item"><span class="course-code">ENCM 509</span><span>Fundamentals of Biometric
+                        Systems Design</span></div>
+                <div class="course-item"><span class="course-code">CPSC 526</span><span>Network Systems Security</span>
+                </div>
+                <div class="course-item"><span class="course-code">CPSC 525</span><span>Principles of Computer
+                        Security</span></div>
+                <div class="course-item"><span class="course-code">SENG 511</span><span>Software Process and Project
+                        Management</span></div>
+                <div class="course-item"><span class="course-code">ENEL 525</span><span>Machine Learning for
+                        Engineers</span></div>
+                <div class="course-item"><span class="course-code">CPSC 471</span><span>Database Management
+                        Systems</span></div>
+                <div class="course-item"><span class="course-code">SENG 401</span><span>Software Architecture</span>
+                </div>
+                <div class="course-item"><span class="course-code">SENG 471</span><span>Software Requirements
+                        Engineering</span></div>
+                <div class="course-item"><span class="course-code">SENG 438</span><span>Software Testing, Reliability,
+                        and Quality</span></div>
+                <div class="course-item"><span class="course-code">CPSC 441</span><span>Computer Networks</span></div>
+                <div class="course-item"><span class="course-code">CPSC 457</span><span>Principles of Operating
+                        Systems</span></div>
+                <div class="course-item"><span class="course-code">ENCM 511</span><span>Embedded System
+                        Interfacing</span></div>
+                <div class="course-item"><span class="course-code">ENSF 480</span><span>Principles of Software
+                        Design</span></div>
+                <div class="course-item"><span class="course-code">ENSF 409</span><span>Principles of Software
+                        Development</span></div>
+                <div class="course-item"><span class="course-code">CPSC 319</span><span>Data Structures, Algorithms, and
+                        Their Applications</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section" id="portfolio" style="min-height: auto;">
+        <canvas class="particles-bg" data-particle-id="portfolio"></canvas>
+        <div class="section-inner">
+            <div class="section-label">05 — Portfolio</div>
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-sub">Academic and personal projects. More on <a
+                    href="https://github.com/Mitchell-F-Newell"
+                    style="color:var(--cyan); text-decoration:none;">GitHub</a>.</p>
+
+            <div class="portfolio-grid wow-fade">
+                <div class="portfolio-card" onclick="openModal('modal1')">
+                    <img src="img/Animagic/Animagic.png" alt="Animagic">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Animagic Animation Studio</div>
+                        <div class="portfolio-meta">C/C++ · Capstone</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal2')">
+                    <img src="img/Animagic_Site/SiteHome.PNG" alt="Animagic Website">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Animagic Website</div>
+                        <div class="portfolio-meta">Web Development</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal3')">
+                    <img src="img/Helens_House_Of_Heragon/Helens_House_Home_Page_Preview.png" alt="Helens House">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Helens House of Heragon</div>
+                        <div class="portfolio-meta">Web Development</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal4')">
+                    <img src="img/Discord_Bot/Discord_Bot_Preview.png" alt="Discord Bot">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Discord Bot</div>
+                        <div class="portfolio-meta">JavaScript · Discord API</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal5')">
+                    <img src="img/Key_Clue/Keyclue_Preview.png" alt="KeyClue">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">KeyClue Database Project</div>
+                        <div class="portfolio-meta">PHP · CPSC 471</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal6')">
+                    <img src="img/Android_Calculator/AndroidCalculator_Preview.png" alt="Android Calculator">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Android Calculator</div>
+                        <div class="portfolio-meta">Java · Android</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal7')">
+                    <img src="img/Car_Assistance/Modelling.png" alt="Car Assistance">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Car Purchasing Assistant</div>
+                        <div class="portfolio-meta">Web · SENG 471</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal8')">
+                    <img src="img/Flight_Management/Flight_Management_Preview.png" alt="Flight Management">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Flight Management App</div>
+                        <div class="portfolio-meta">Java · ENSF 409</div>
+                    </div>
+                </div>
+                <div class="portfolio-card" onclick="openModal('modal9')">
+                    <img src="img/Bug_Tracking_System/Login.PNG" alt="Bug Tracker">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-icon"><i class="fas fa-plus"></i></div>
+                        <div class="portfolio-title">Bug Logging Tool</div>
+                        <div class="portfolio-meta">Java · ENSF 480</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="min-height: auto;">
+        <canvas class="particles-bg" data-particle-id="contact"></canvas>
+        <div class="section-inner">
+            <div class="section-label">06 — Contact</div>
+            <div class="contact-grid wow-fade">
+                <div>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-sub">Open to new opportunities and conversations. Reach out through any channel.
                     </p>
-                    </br>
-                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="Mitchell-Newell-Resume-2025.pdf" download="Mitchell-Newell-Resume" style="margin-bottom: 20px;">My Resume</a>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/mitchell-newell-7b0768177" class="contact-link"
+                            target="_blank">
+                            <i class="fab fa-linkedin"></i> linkedin.com/in/mitchell-newell
+                        </a>
+                        <a href="https://github.com/Mitchell-F-Newell" class="contact-link" target="_blank">
+                            <i class="fab fa-github"></i> github.com/Mitchell-F-Newell
+                        </a>
+                        <a href="https://gitlab.com/MNewell" class="contact-link" target="_blank">
+                            <i class="fab fa-gitlab"></i> gitlab.com/MNewell
+                        </a>
+                        <a href="mailto:mitchell.newell.dev@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> mitchell.newell.dev@gmail.com
+                        </a>
+                        <a href="tel:403-612-4000" class="contact-link">
+                            <i class="fas fa-phone"></i> 403-612-4000
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Skills-->
-    <section class="page-section text-center" id="skills">
-        <div id="particles-js-skills"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">Skills</h2>
-                    <h3 class="section-subheading">Some skills and technologies I am proficient in!</h3>
-                </div>
-            </div>
-            <h3 style="color: #cbce91ff;"><b>Programming Languages</b></h3>
-            <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.1s">
-
-                <div class="skillbar clearfix " data-percent="90%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>JS</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">90%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="85%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>PYTHON</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">85%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="75%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>SQL</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">75%</div>
-                </div> <!-- End Skill Bar -->
-
-
-                <div class="skillbar clearfix " data-percent="75%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>PHP</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">75%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="75%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>HTML</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">75%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="70%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>CSS</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">70%</div>
-                </div>
-
-                <div class="skillbar clearfix " data-percent="60%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>JAVA</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">60%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="60%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>C</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">60%</div>
-                </div> <!-- End Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="60%">
-                    <div class="skillbar-title" style="background: #FF6363;"><span>C++</span></div>
-                    <div class="skillbar-bar" style="background: #FF6363;"></div>
-                    <div class="skill-bar-percent">60%</div>
-                </div> <!-- End Skill Bar -->
-            </div><!-- End Skill Bar -->
-
-            <!-- Technologies-->
-            <h3 style="color: #cbce91ff;"><b>Technologies</b></h3>
-            <ul class="list">
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>ArgoCD</li>
-                <li>Jenkins</li>
-                <li>Amazon Web Services (AWS)</li>
-                <li>React</li>
-                <li>AngularJS</li>
-                <li>Node.js</li>
-                <li>TypeScript</li>
-            </ul>
-        </div>
-    </section>
-     <!-- Experience-->
-     <section class="page-section text-center" id="experience">
-        <div id="particles-js-experience"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">Experience</h2>
-                    <h3 class="section-subheading">A list of my previous technical and industry experience</h3>
-                </div>
-            </div>
-            <h5>Trolley | Software Developer, Core Team | August 2022 – Current</h5>
-            <h6>Duties:</h6>
-            <ul class = "list">
-                <li>Worked on Trolley’s Core team maintaining and developing new features for all existing Tax and Pay products across multiple repos (Both FE/BE work)</li>
-                <li>Lead development on Trolley’s Cross River Bank integration and worked on Trolley’s Citi bank integration </li>
-                <li>Worked on a development team of two that designed, developed and released Trolley’s Sync product (Third party invoice ingestion and reconciliation) </li>
-                <li>Worked on the development and release of Trolley’s EU Tax product (Tax e-file generation, e-delivery to recipients, and government submission) </li>
-                <li>Involved with technical interviews, facilitating knowledge transfer sessions and onboarding new team members </li>
-                <li>Part of a support engineering rotation cycle and involved with debugging and resolving incidents/bugs </li>
-                <li>Update and write unit tests using Mocha testing framework </li>
-            </ul>
-            <h6>Tech Stack:</h6>
-            <ul class = "list">
-                <li>TypeScript</li>
-                <li>Node.js</li>
-                <li>React</li>
-                <li>Mocha</li>
-                <li>PostgreSQL</li>
-            </ul>
-            <h5>Reach | Software Developer, Core Team | February 2022 – August 2022</h5>
-            <h6>Duties:</h6>
-            <ul class = "list">
-                <li>Lead development on the UI re-design and PowerBI embedded reports integration into Reach’s merchant facing Admin application </li>
-                <li>Lead development on migrating Reach's TaaS (Tax as a Service) product to Kafka </li>
-                <li>Create and improve Postman automation tests </li>
-                <li>Facilitate cross team communication and stake holder meetings </li>
-            </ul>
-            <h6>Tech Stack:</h6>
-            <ul class = "list">
-                <li>C++</li>
-                <li>JavaScript</li>
-                <li>Vue.js</li>
-                <li> HTML</li>
-                <li>PostgreSQL</li>
-            </ul>
-            <h5>Helcim | Core (April 2021 – June 2021) | DevOps (June 2021 – February 2022)</h5>
-            <h6>Duties:</h6>
-            <ul class = "list">
-                <li>Part of a team of two that built and documented Helcim's Kubernetes environment </li>
-                <li>Lead the implementation of ArgoCD into Helcim's Kubernetes environment </li>
-                <li>Lead the implementation of  ProxySQL into Helcim's database setup </li>
-                <li>Maintained and improved Helcim's deployment pipelines </li>
-                <li>Built and maintained  Helcim's development docker environment </li>
-                <li>Worked on improving Helcim's Encryption and Data Vault services and lead the Data Vault projects move to Docker </li>
-                <li>Maintained and improved Helcims ELK stack (ElasticSearch, Logstash, Kibana)</li>
-                <li>Collaborate in mitigating security emergencies (such as DDOS attacks)</li>
-            </ul>
-            <h6>Tech Stack:</h6>
-            <ul class = "list">
-                <li>C</li>
-                <li>Bash</li>
-                <li>Kubernetes</li>
-                <li>ELK stack</li>
-            </ul>
-            <h5>Helcim | Junior Developer - System Security Focus | Jun 2020 – Apr 2021</h5>
-            <h6>Duties:</h6>
-            <ul class = "list">
-
-                <li>Maintained, managed and update Helcim’s central security “Control “service, Helcim’s servers and Helcim’s TLS certificates </li>
-                <li>Maintained and managed Helcim's crons across all microservices </li>
-                <li>Lead development on QR Code 2FA implementation into Helcim’s web application </li>
-                <li>Worked on implementing equipment order management to Helcim’s “Hub” service </li>
-                <li>Manage and maintain Helcim's physical servers</li>
-                <li>Monitor and mitigate security events/vulnerbilities</li>
-                <li>Investigate new infrastructure technologies</li>
-                <li>On call responsibilities</li>
-            </ul>
-            <h6>Tech Stack:</h6>
-            <ul class = "list">
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>Vue.js</li>
-                <li>MySQL</li>
-                <li>Bash</li>
-            </ul>
-            <h5>SOFTWARE DEVELOPER INTERN| ARTERYS INC. | MAY 2018 - JULY 2019</h5>
-            <h6>Duties:</h6>
-            <ul class = "list">
-                <li>Member of the platform team specializing in backend processes</li>
-                <li>Contributed to the development of the Arterys third-party ML Model integration service </li>
-                <li>Developed Unit and Integration tests</li>
-                <li>Worked on MFA service and Arterys Third Party IDP service</li>
-                <li>Bug fixing</li>
-            </ul>
-            <h6>Tech Stack:</h6>
-            <ul class = "list">
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>AngularJS</li>
-                <li>Vue.js</li>
-                <li>MongoDB</li>
-            </ul>
-        </div>
-    </section>
-    <!-- Courses-->
-    <section class="page-section" id="courses">
-        <div id="particles-js-courses"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">Courses</h2>
-                    <h3 class="section-subheading">A list of technical courses and electives I have taken throughout my degree</h3>
-                </div>
-            </div>
-            <ul class = "list">
-                <li>ENGG 504 - Entrepreneurial Capstone Design Project II</li>
-                <li>ENGG 503 - Entrepreneurial Capstone Design Project I</li>
-                <li>SENG 533 - Software Performance Evaluation</li>
-                <li>ENEL 503 - Computer Vision</li>
-                <li>ENCM 509 - Fundamentals of Biometric Systems Design</li>
-                <li>CPSC 526 - Network Systems Security</li>
-                <li>CPSC 525 - Principles of Computer Security</li>
-                <li>SENG 511 - Software Process and Project Management</li>
-                <li>ENEL 525 - Machine Learning for Engineers</li>
-                <li>CPSC 471 - Data Base Management Systems</li>
-                <li>SENG 401 - Software Architecture</li>
-                <li>SENG 471 - Software Requirements Engineering</li>
-                <li>SENG 438 - Software Testing, Reliability, and Quality</li>
-                <li>CPSC 441 - Computer Networks</li>
-                <li>CPSC 457 - Principles of Operating Systems</li>
-                <li>ENCM 511 - Embedded System Interfacing</li>
-                <li>ENSF 480 - Principles of Software Design</li>
-                <li>ENSF 409 - Principles of Software Development</li>
-                <li>CPSC 319 - Data Structures, Algorithms, and Their Applications</li>
-            </ul>
-        </div>
-    </section>
-    <!-- Portfolio Grid -->
-    <section class="page-section" id="portfolio">
-        <div id="particles-js-portfolio"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">Portfolio</h2>
-                    <h3 class="section-subheading">Checkout some of my previous academic/personal projects. <br>
-                    For more of my projects visit my <a href = "https://github.com/Mitchell-F-Newell"> Github.</a></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Animagic/Animagic.png" alt="">
+                <div class="contact-right">
+                    <p>Based in Calgary, Alberta. Engineering leader with a focus on fintech payment infrastructure and
+                        high-performance teams.</p>
+                    <p>Whether you have a role to discuss, a technical challenge to solve, or just want to connect — I'm
+                        happy to chat.</p>
+                    <a href="Mitchell-Newell-Resume-2026.pdf" download class="btn-primary-custom"
+                        style="margin-top: 16px;">
+                        <i class="fas fa-file-alt"></i> Download Resume
                     </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Animagic Animation Platform</p>
-                    </div>
-                </div> <!-- End of Project 1-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Animagic_Site/SiteHome.PNG" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Animagic Website</p>
-                    </div>
-                </div><!-- End of Project 2-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Helens_House_Of_Heragon/Helens_House_Home_Page_Preview.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Helens House of Heragon Website</p>
-                    </div>
-                </div><!-- End of Project 3-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Discord_Bot/Discord_Bot_Preview.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Discord Bot</p>
-                    </div>
-                </div><!-- End of Project 4-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Key_Clue/Keyclue_Preview.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">KeyClue Database Project</p>
-                    </div>
-                </div><!-- End of Project 5-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Android_Calculator/AndroidCalculator_Preview.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Android Calculator</p>
-                    </div>
-                </div><!-- End of Project 6-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Car_Assistance/Modelling.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Car Purchasing Assistance Application</p>
-                    </div>
-                </div><!-- End of Project 7-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Flight_Management/Flight_Management_Preview.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Flight Management Application</p>
-                    </div>
-                </div><!-- End of Project 8-->
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/Bug_Tracking_System/Login.PNG" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <p class="text-muted">Bug Logging Tool</p>
-                    </div>
-                </div><!-- End of Project 9-->
-            </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section class="page-section" id="contact">
-        <div id="particles-js-contact"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase header">Contact</h2>
-                    <h3 class="section-subheading">Contact via any of the methods listed below. I'd love to hear more about any potential opprotunities!</h3>
-                </div>
-            </div>
-            <div class="content wow fadeInDown" data-wow-delay="0.2s">
-                <h4>CONNECT WITH ME</h4>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/mitchell-newell-7b0768177" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/Mitchell-F-Newell" title="Github"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="https://gitlab.com/MNewell" title="GitLab"><i class="fab fa-gitlab fa-2x"></i></a>
-                    <h5>Email: <a href="mailto: mitchell.newell.dev@gmail.com?subject=Mitchell Newell Personal Website Response" title="Email: mitchell.newell.dev@gmail.com">mitchell.newell.dev@gmail.com</a> </h5>
-                    <h5> Telephone: <a href="tel:403-612-4000" title="Phone number: 403-612-4000">403-612-4000</a></h5>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Modals -->
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Animagic Animation Studio</h2>
-                                <ul class="list-inline">
-                                    <li>Date: Septempber 2019 - May 2020</li>
-                                    <li>Course: Capstone</li>
-                                    <li>Category: C/C++ Development </li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Animagic/Animagic_Grid.gif" alt="">
-                                <p class="item-description">
-                                    Developed as part of the Entrepreneurial Capstone course offered at the University of Calgary, AniMagic is an animation suite that aims to reduce the time, 
-                                    cost and learning curve that current animators face on a day-to-day basis. It incorporates modern 2D and 3D animation tools and features in one place, 
-                                    eliminating an animator’s struggle with outdated tools and multi-software workflow. AniMagic reduces the time to produce 2D animated shorts, TV shows, and 
-                                    films by automating the redisplay of 3D backgrounds without requiring animators to redraw backgrounds for each frame.
+    <footer>
+        <span style="color:var(--cyan)">Mitchell Newell</span> &nbsp;·&nbsp; Software Engineering Manager &nbsp;·&nbsp;
+        Calgary, AB
+    </footer>
 
-                                    AniMagic aims to create an animation suite that allows 2D animators to integrate 3D tools and techniques into their workflow. It provides animators with the ability 
-                                    to maintain the same level of charm associated with traditional 2D animation, while ultimately requiring less time and effort to complete them. 
-                                    
-                                    Animagic Currently offers users the following functionality:
-                                </p>
-                                <ul class = "list">
-                                    <li>3D model importing and controls, where each model can then be scaled, rotated and translated according to the animators desire. </li>
-                                    <li>3D transformational keyframes unique to the scale, rotation, and translation of each model.</li>
-                                    <li>Customizable animation playback speed to adjust the rate at which the animation performs linear interpolation between keyframes.</li>
-                                    <li>3D model painting with various painting tools and custom colors.</li>
-                                    <li>File saving and loading through a proprietary file format (.magi).</li>
-                                    <li>Animation exporting as a .gif format, with additional still image exporting as .png format.</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- ─── MODALS ─────────────────────────────────────────── -->
+    <div class="modal-overlay" id="modal1" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal1')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Animagic Animation Studio</div>
+            <div class="modal-meta">
+                <span class="modal-badge">Sep 2019 – May 2020</span>
+                <span class="modal-badge">Capstone</span>
+                <span class="modal-badge">C / C++</span>
             </div>
+            <img src="img/Animagic/Animagic_Grid.gif" alt="" class="modal-img">
+            <p class="modal-desc">Developed as part of the Entrepreneurial Capstone course at the University of Calgary.
+                AniMagic is an animation suite that reduces the time, cost, and learning curve that animators face
+                daily. It incorporates modern 2D and 3D tools in one place, allowing animators to maintain 2D charm
+                while integrating 3D backgrounds automatically.</p>
+            <ul class="modal-list">
+                <li>3D model importing with scale, rotate, and translate controls.</li>
+                <li>3D transformational keyframes per model.</li>
+                <li>Customizable animation playback speed with linear interpolation.</li>
+                <li>3D model painting with custom color tools.</li>
+                <li>Proprietary file format (.magi) for save/load.</li>
+                <li>GIF and PNG export support.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Animagic Website</h2>
-                                <p class="item-intro">Visit the website at <a href="https://mitchell-f-newell.github.io/Animagic/">Animagic</a></p>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Animagic"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: February 2020</li>
-                                    <li>Course: Personal Project (Associated to Capstone project)</li>
-                                    <li>Category: Web Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Animagic_Site/SiteHome.PNG" alt="">
-                                <p class="item-description">
-                                    This website was made to promote the Animagic software and serve as a platform to keep potential users and interested parties upto date with Animagic.
-                                    The site also serves as a communication channel for interested parties/individuals to directly contact the development team on the project to answer 
-                                    any questions they may have.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="modal-overlay" id="modal2" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal2')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Animagic Website</div>
+            <div class="modal-meta">
+                <span class="modal-badge">Feb 2020</span>
+                <span class="modal-badge">Web Development</span>
             </div>
+            <img src="img/Animagic_Site/SiteHome.PNG" alt="" class="modal-img">
+            <p class="modal-desc">Promotional website for the Animagic software, built to keep potential users and
+                interested parties up to date with the project. Also serves as a communication channel between the
+                development team and interested individuals.</p>
+            <p class="modal-desc"><a href="https://mitchell-f-newell.github.io/Animagic/"
+                    style="color:var(--cyan)">Visit the site</a> · <a
+                    href="https://github.com/Mitchell-F-Newell/Animagic" style="color:var(--cyan)">View on GitHub</a>
+            </p>
         </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase"> Helens House Of Heragon Webpage</h2>
-                                <p class="item-intro">Visit the website at <a href="https://orearow.github.io/moyin//">Helen House</a></p>
-                                <p class="item-intro">Check out the source code on <a href="https://github.com/orearow/moyin"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: December 2019</li>
-                                    <li>Course: Personal Project</li>
-                                    <li>Category: Web Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Helens_House_Of_Heragon/Helens_House_Home_Page.PNG" alt="">
-                                <p class="item-description">
-                                    This website was created for Moyin Arowobusoye who is a makeup artist located in Ibadan, Nigeria.
-                                    The website displays and promotes Moyin's professional Hair, Makeup and Henna services as well as serves
-                                    as a communication channel between herself and potential customers.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="modal-overlay" id="modal3" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal3')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Helens House of Heragon Website</div>
+            <div class="modal-meta"><span class="modal-badge">Dec 2019</span><span class="modal-badge">Web
+                    Development</span></div>
+            <img src="img/Helens_House_Of_Heragon/Helens_House_Home_Page.PNG" alt="" class="modal-img">
+            <p class="modal-desc">Website created for a makeup artist based in Ibadan, Nigeria. Promotes professional
+                Hair, Makeup, and Henna services and provides a communication channel for potential customers.</p>
+            <p class="modal-desc"><a href="https://orearow.github.io/moyin//" style="color:var(--cyan)">Visit site</a> ·
+                <a href="https://github.com/orearow/moyin" style="color:var(--cyan)">View on GitHub</a></p>
         </div>
     </div>
-     <!-- Modal 4 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Discord Bot</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Simple_Discord_Bot"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2018</li>
-                                    <li>Course: Personal Project </li>
-                                    <li>Category: JavaScript Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Discord_Bot/Discord_Bot.PNG" alt="">
-                                <p class="item-description">
-                                    This project is a simple discord bot which I used as an introduction into developing with the Discord API as well as the Discord.js node module.
-                                    The discord bot can be used to send automated message responses, gifs, as well as help moderate a Discord server
-                                    with the ability to kick users.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Modal 5 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Key Clue Database Project</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/KeyClue_Database_System"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: April 2018</li>
-                                    <li>Course: CPSC 471 (Databases)</li>
-                                    <li>Category: PHP development </li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Key_Clue/KeyClue_Overview.jpg" alt="">
-                                <p class = "item-description">
-                                    The project was intended to be used by the Electrical and Software Engineering departments KeyClue team, as a means of
-                                    tracking, monitoring and maintaining clues and the progress made on each clue.
-                                    The KeyClue Database Project was made as part of the Database Course (CPSC 471) offered at the University of Calgary and 
-                                    allowed students todevelop their database and SQL skills.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Modal 6 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Android Calculator</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Android_Calculator_App"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Course: ENSF 409 (Principles Of Software Development)</li>
-                                    <li>Category: Android Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Android_Calculator/AndroidCalculatorSmall.PNG" alt="">
-                                <p class = "item-description">
-                                    The Android Calculator project is a simple calculator made within Android studio for android devices. 
-                                    The project was made as part of the ENSF 409 (Principles Of Software Development) at the University of Calgary 
-                                    and served as an introduction into Android development for students.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 7 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Car Purchasing Assistance Application</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Car_Dealership_Customer_Assistance_Tool"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: April 2018</li>
-                                    <li>Course: SENG 471 (Software Requirements Engineering)</li>
-                                    <li>Category: Web Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Car_Assistance/Car_Assistance_Overview.jpg" alt="">
-                                <p class = "item-description">
-                                    The Car Purchasing Assistance Application is a simple project intended to help users find the car most suitable to their lifestyle,
-                                    allow users to spec their vehicle as well as send their vehicle specification to the nearest applicable dealer. 
-                                    This project was made as part of the SENG 471 (Software Requirements Engineering) course at the University of Calgary and allowed students 
-                                    to develop their software requirement elicitation skills (As the project requirements were obtained through interviewing key stakeholders in the proposed project).
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Modal 8 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Flight Management Application</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Flight_Management_Application"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: April 2017</li>
-                                    <li>Course: ENSF 409 (Principles Of Software Development)</li>
-                                    <li>Category: Java Development</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Flight_Management/Flight_Management_Overview.jpg" alt="">
-                                <p class = "item-description">
-                                    The Flight Management Application is a project intended to help Airlines sell and keep track of flights and tickets, as well as 
-                                    assist customers with purchasing and storing all their flight tickets in one place.
-                                    This project was made as part of the ENSF 409 (Principles of Software Development) course at the University of Calgary and allowed students 
-                                    to develop their skills throughout the whole software development life cycle (From design to deployment).
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 9 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Bug Logging Tool</h2>
-                                <p class="item-intro">Check out the source code on my <a href="https://github.com/Mitchell-F-Newell/Bug_Logging_Tool"> Github!</a></p>
-                                <ul class="list-inline">
-                                    <li>Date: December 2017</li>
-                                    <li>Course: ENSF 480 (Principles of Software Design)</li>
-                                    <li>Category: Java</li>
-                                </ul>
-                                <img class="img-fluid d-block mx-auto" src="img/Bug_Tracking_System/Bug_Tracking_Overview.png" alt="">
-                                <p class = "item-description">
-                                    The Bug Logging Tool is a project intended to help developers log and keep track on the progress of bugs within one or more pieces of software.
-                                    This project was made as part of the ENSF 480 (Principles of Software Design) course at the University of Calgary and allowed students 
-                                    to develop their software design skills through an iterative design process.
-                                </p>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
-    <!-- Custom scripts for this template -->
-    <script src="js/agency.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/Particles.js"></script>
-    <script src = "js/Messages.js"></script>
-    <script src="js/skillbar.js"></script>
+    <div class="modal-overlay" id="modal4" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal4')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Discord Bot</div>
+            <div class="modal-meta"><span class="modal-badge">Jul 2018</span><span
+                    class="modal-badge">JavaScript</span><span class="modal-badge">Discord API</span></div>
+            <img src="img/Discord_Bot/Discord_Bot.PNG" alt="" class="modal-img">
+            <p class="modal-desc">A simple Discord bot built as an introduction to the Discord API and Discord.js.
+                Supports automated message responses, GIF posting, and server moderation including user kicking.</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/Simple_Discord_Bot"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal5" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal5')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">KeyClue Database Project</div>
+            <div class="modal-meta"><span class="modal-badge">Apr 2018</span><span class="modal-badge">CPSC
+                    471</span><span class="modal-badge">PHP</span></div>
+            <img src="img/Key_Clue/KeyClue_Overview.jpg" alt="" class="modal-img">
+            <p class="modal-desc">A clue tracking and management system for the Electrical and Software Engineering
+                departments. Built to monitor and maintain clues and progress. Developed as part of the CPSC 471
+                Database course.</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/KeyClue_Database_System"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal6" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal6')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Android Calculator</div>
+            <div class="modal-meta"><span class="modal-badge">Jan 2017</span><span class="modal-badge">ENSF
+                    409</span><span class="modal-badge">Java / Android</span></div>
+            <img src="img/Android_Calculator/AndroidCalculatorSmall.PNG" alt="" class="modal-img">
+            <p class="modal-desc">A simple Android calculator built in Android Studio. Created as part of ENSF 409
+                (Principles of Software Development) as an introduction to Android development.</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/Android_Calculator_App"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal7" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal7')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Car Purchasing Assistance Application</div>
+            <div class="modal-meta"><span class="modal-badge">Apr 2018</span><span class="modal-badge">SENG
+                    471</span><span class="modal-badge">Web Dev</span></div>
+            <img src="img/Car_Assistance/Car_Assistance_Overview.jpg" alt="" class="modal-img">
+            <p class="modal-desc">Helps users find a car suited to their lifestyle, spec their vehicle, and send the
+                spec to the nearest applicable dealer. Requirements were gathered through stakeholder interviews as part
+                of SENG 471.</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/Car_Dealership_Customer_Assistance_Tool"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal8" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal8')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Flight Management Application</div>
+            <div class="modal-meta"><span class="modal-badge">Apr 2017</span><span class="modal-badge">ENSF
+                    409</span><span class="modal-badge">Java</span></div>
+            <img src="img/Flight_Management/Flight_Management_Overview.jpg" alt="" class="modal-img">
+            <p class="modal-desc">Helps airlines sell and track flights and tickets, and assists customers with
+                purchasing and managing their bookings. Developed through the full software development life cycle as
+                part of ENSF 409.</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/Flight_Management_Application"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal9" onclick="closeModalOutside(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal9')"><i class="fas fa-times"></i></button>
+            <div class="modal-title">Bug Logging Tool</div>
+            <div class="modal-meta"><span class="modal-badge">Dec 2017</span><span class="modal-badge">ENSF
+                    480</span><span class="modal-badge">Java</span></div>
+            <img src="img/Bug_Tracking_System/Bug_Tracking_Overview.png" alt="" class="modal-img">
+            <p class="modal-desc">A tool to help developers log and track the progress of bugs across one or more
+                software projects. Developed through an iterative design process as part of ENSF 480 (Principles of
+                Software Design).</p>
+            <p class="modal-desc"><a href="https://github.com/Mitchell-F-Newell/Bug_Logging_Tool"
+                    style="color:var(--cyan)">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
-
-
